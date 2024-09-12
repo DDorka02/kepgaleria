@@ -1,16 +1,18 @@
-export default class Kartya {
-    //adattagok
-    #obj={}
-    #szuloELEM;
-    //construktor
-    constructor(obj,szuloELEM){
-        this.#obj=obj
-        this.#szuloELEM=szuloELEM
-        this.kepKiir()
+import Jatekter from "./Jatekter.js";
 
+export default class Kartya {
+    #lista=[]
+    #taroloELEM
+    constructor(lista,taroloELEM){
+        this.#lista=lista
+        this.#taroloELEM=taroloELEM
+        this.#taroloELEM.empty()
+        this.kepKiir()
     }
-    //tagfüggvény
-    kepKiir() {
-        this.#szuloELEM.append(`<img src="kepek/virag.jpeg" alt=""></img>`)
-        }
+
+    kepKiir(){
+        this.#lista.forEach((elem)=>{
+            new Jatekter(elem,this.#taroloELEM)
+          })
     }
+}

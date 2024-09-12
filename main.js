@@ -1,58 +1,47 @@
-import { kepekLISTA } from "./adatok.js";
-import Jatekter from "./Jatekter.js";
+import { KEPEK } from "./adatok.js";
 import Kartya from "./Kartya.js";
 
 const TARTALOM = $(".galeria");
-const NAGYKEP = $(".nagykep")
 
-new Kartya(kepekLISTA,NAGYKEP)
+new Kartya(KEPEK, TARTALOM);
 
-  kepekLISTA.forEach((elem)=>{
-    console.log(elem)
-    new Jatekter(elem,TARTALOM)
-  })
+const nagykepIMG = $(".nagykep img");
+const kisKEPELEMEK = $(".kep");
 
+for (let index = 0; index < kisKEPELEMEK.length; index++) {
+  kisKEPELEMEK[index].on("click", function (event) {
+    console.log(event.target.src);
+    aktIndex = index;
+    nagykepIMG.attr = event.target.src;
+  });
+}
 
-    
-    const nagykepIMGELEM = $(".nagykep img")
-  
-    const nagykepIMGELEM2 = $(".nagykep")[0]
+let aktIndex = 0;
 
-    const kisKEPELEMEK =$(".kep");
-    
-    for (let index = 0; index < kisKEPELEMEK.length; index++) {
-        kisKEPELEMEK[index].on("click",function (event){
-            console.log(event.target.src)
-            aktIndex=index;
-            nagykepIMGELEM.attr=event.target.src
-            nagykepIMGELEM2.removeClass("rejtett")
-        });
-    
+const jobbgomb = $(".jobb");
+for (let index = 0; index < jobbgomb; index++) {
+  jobbgomb[index].on("click", function() {
+    if (aktIndex < KEPEK.length -1 ) {
+      aktIndex++;
+    } else {
+      aktIndex = 0;
     }
+    console.log(aktIndex)
+    console.log(KEPEK[aktIndex].kep)
+    nagykepIMG.attr = KEPEK[aktIndex].kep;
+  });
+}
 
-  let aktIndex=0;
-    const jobbgomb = $(".jobb")
-    jobbgomb.on("click",jobbra)
-    /*const balgomb = $(".bal")
-    balgomb.on("click", balra)
-*/
+const balgomb = $(".bal")
+        for (let index = 0; index < balgomb; index++) {
+            balgomb[index].on("click", function() {
+              if (aktIndex > 0 ) {
+                aktIndex--;
+              } else {
+                aktIndex = KEPEK.length -1;
+              }
+              console.log(aktIndex)
+              console.log(KEPEK[aktIndex].kep)
+              nagykepIMG.attr = KEPEK[aktIndex].kep;
 
-    function jobbra() {
-        aktIndex++;
-        if (aktIndex>=kepekLISTA.length) {
-            aktIndex=0;           
-        }
-        console.log(aktIndex)
-        console.log(kepekLISTA[aktIndex].kep)
-    }
-
-    /*function balra() {
-        aktIndex--;
-        if (aktIndex<=kepekLISTA.length) {
-            aktIndex=-1;           
-        }
-        console.log(aktIndex)
-        console.log(kepekLISTA[aktIndex].kep)
-
-    }*/
-    
+            });}

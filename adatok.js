@@ -1,37 +1,32 @@
-export const kepekLISTA = [
+export const KEPEK = [
   {
-    kep: "kepek/lilom.jpg",
+    kep: "kepek/DSC7681.jpeg",
     cim: "Kakasmandiko",
-    leiras: "frdf",
+    leiras: "A kakasmandikó az egyszikűek osztályába a liliomvirágúak rendjébe és a liliomfélék családjába tartozó faj.",
   },
   {
-    kep: "kepek/viragok.jpg",
+    kep: "kepek/DSC8847.jpeg",
     cim: "Galambvirág",
-    leiras: "frdf",
+    leiras: "A galambvirág a boglárkavirágúak rendjébe és a boglárkafélék családjába tartozó növénynemzetség. Az Isopyrum igen közeli rokona az Enemion nemzetség, amelyet egyes rendszertanok az Isopyrum részként tartanak számon.",
   },
   {
-    kep: "kepek/kekvirag.jpg",
+    kep: "kepek/DSC8888.jpeg",
     cim: "Májvirág",
-    leiras: "frdf",
+    leiras: "A nemes májvirág a boglárkavirágúak rendjébe, ezen belül a boglárkafélék családjába tartozó faj. Az Év vadvirága 2020-ban.",
   },
   {
-    kep: "kepek/virag.jpg",
+    kep: "kepek/DSC8912.jpeg",
     cim: "Tavaszi erdő",
-    leiras: "frdf",
+    leiras: "A tavaszban barka fakad,harmat hasal,dallam dagad.",
   },
   {
-    kep: "kepek/virag.jpeg",
+    kep: "kepek/DSC8963.jpeg",
     cim: "Csillagvirág",
-    leiras: "frdf",
+    leiras: "A csillagvirág a spárgafélék családjába és a csillagvirágformák alcsaládba tartozó nemzetség. Nagyjából 90 faj tartozik a nemzetséghez. ",
   },
   {
-    kep: "kepek/virag.jpg",
+    kep: "kepek/DSC9135.jpeg",
     cim: "Keltike",
-    leiras: "frdf",
-  },
-  {
-    kep: "kepek/virag.jpg",
-    cim: "Kakasmandiko",
-    leiras: "frdf",
+    leiras: "A keltike a mákfélék családjának füstikeformák alcsaládjába tartozó Corydalis nemzetség fajainak magyar elnevezése. A nemzetség kora tavasszal virágzó, lágyszárú növényeket foglal magába. ",
   },
 ];
