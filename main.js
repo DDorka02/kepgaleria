@@ -3,25 +3,23 @@ import Jatekter from "./Jatekter.js";
 import Kartya from "./Kartya.js";
 
 const TARTALOM = $(".galeria");
-const NAGYKEP = $(".nagykep rejtett")
+const NAGYKEP = $(".nagykep")
 
-kepekLISTA.forEach((elem)=>{
-    console.log(elem)
-    new Kartya(elem,NAGYKEP)
-  })
+new Kartya(kepekLISTA,NAGYKEP)
 
   kepekLISTA.forEach((elem)=>{
     console.log(elem)
     new Jatekter(elem,TARTALOM)
   })
 
+
+    
     const nagykepIMGELEM = $(".nagykep img")
   
     const nagykepIMGELEM2 = $(".nagykep")[0]
 
     const kisKEPELEMEK =$(".kep");
-
-
+    
     for (let index = 0; index < kisKEPELEMEK.length; index++) {
         kisKEPELEMEK[index].on("click",function (event){
             console.log(event.target.src)
@@ -31,6 +29,7 @@ kepekLISTA.forEach((elem)=>{
         });
     
     }
+
   let aktIndex=0;
     const jobbgomb = $(".jobb")
     jobbgomb.on("click",jobbra)

@@ -20,7 +20,7 @@ export const kepekLISTA = [
     leiras: "frdf",
   },
   {
-    kep: "kepek/virag.jpg",
+    kep: "kepek/virag.jpeg",
     cim: "Csillagvirág",
     leiras: "frdf",
   },
