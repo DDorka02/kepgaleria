@@ -1,30 +1,31 @@
 export const KEPEK = [
     {
-        kep: "kepek/DSC7681.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Kakasmandiko",
+        leiras:"frdf"
     },
     {
-        kep: "kepek/DSC8847.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Galambvirág",
     },
     {
-        kep: "kepek/DSC8888.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Májvirág",
     },
     {
-        kep: "kepek/DSC8912.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Tavaszi erdő",
     },
     {
-        kep: "kepek/DSC8963.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Csillagvirág",
     },
     {
-        kep: "kepek/DSC9135.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Keltike",
     },
     {
-        kep: "kepek/DSC9311.jpeg",
+        kep: "kepek/virag.jpg",
         cim: "Kakasmandiko",
     },
 ];
