@@ -1,20 +1,21 @@
-import Jatekter from "./Jatekter.js";
+import { KEPEK } from "./adatok.js";
 
 export default class Kartya {
-    #lista=[]
+    #index
     #taroloELEM
-    #szuloELEM
-    constructor(lista,taroloELEM){
-        this.#lista=lista
+    #source
+
+    constructor(index,taroloELEM){
+        this.#index=index
         this.#taroloELEM=taroloELEM
-        this.#szuloELEM=szuloELEM
         this.#taroloELEM.empty()
+        this.#source= KEPEK[index].kep
         this.kepKiir()
     }
 
     kepKiir(){
         
-        this.#szuloELEM.append(`
+        this.#taroloELEM.append(`
             <img src="kepek/DSC7681.jpeg" alt=""></img>`)
           }
     }

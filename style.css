@@ -37,3 +37,8 @@ h1{
 footer{
     text-align: center;
 }
+
+.flex-container{
+    display: flex;
+    flex:
+}

@@ -3,10 +3,9 @@ import Jatekter from "./Jatekter.js";
 import Kartya from "./Kartya.js";
 
 const TARTALOM = $(".galeria");
+const nagyKEP = $(".kep")
 
-/*
-new Kartya(KEPEK, TARTALOM);
-*/
+new Kartya(2, nagyKEP);
 
 KEPEK.forEach((elem)=>{
   console.log(elem)
