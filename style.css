@@ -42,3 +42,7 @@ footer{
 .belsokep{
     display: inline-block;
 }
+
+.belsokep img{
+    max-height: 400px;
+}
