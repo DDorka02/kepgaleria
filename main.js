@@ -3,7 +3,7 @@ import Jatekter from "./Jatekter.js";
 import Kartya from "./Kartya.js";
 
 const TARTALOM = $(".galeria");
-const nagyKEP = $(".kep")
+const nagyKEP = $(".belsokep")
 
 new Kartya(2, nagyKEP);
 
@@ -33,7 +33,7 @@ for (let index = 0; index < jobbgomb.length; index++) {
     } else {
       aktIndex = 0;
     }
-    nagykepIMG.attr("src", KEPEK[aktIndex].kep);
+    new Kartya(aktIndex,nagyKEP)
   });
 }
 

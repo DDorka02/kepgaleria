@@ -40,5 +40,6 @@ footer{
 
 .flex-container{
     display: flex;
-    flex:
+    flex-wrap: wrap;
 }
+
