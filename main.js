@@ -34,7 +34,7 @@ for (let index = 0; index < jobbgomb.length; index++) {
     } else {
       aktIndex = 0;
     }
-    nagykepIMG.attr = KEPEK[aktIndex].kep;
+    nagykepIMG.attr("src", KEPEK[aktIndex].kep);
   });
 }
 
@@ -46,6 +46,6 @@ for (let index = 0; index < balgomb.length; index++) {
     } else {
         aktIndex = KEPEK.length -1;
     }
-    nagykepIMG.attr = KEPEK[aktIndex].kep;
+    nagykepIMG.attr("src", KEPEK[aktIndex].kep);
  });
 }
