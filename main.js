@@ -1,9 +1,17 @@
 import { KEPEK } from "./adatok.js";
+import Jatekter from "./Jatekter.js";
 import Kartya from "./Kartya.js";
 
 const TARTALOM = $(".galeria");
 
+/*
 new Kartya(KEPEK, TARTALOM);
+*/
+
+KEPEK.forEach((elem)=>{
+  console.log(elem)
+  new Jatekter(elem,TARTALOM)
+})
 
 const nagykepIMG = $(".nagykep img");
 const kisKEPELEMEK = $(".kep");
@@ -19,29 +27,25 @@ for (let index = 0; index < kisKEPELEMEK.length; index++) {
 let aktIndex = 0;
 
 const jobbgomb = $(".jobb");
-for (let index = 0; index < jobbgomb; index++) {
-  jobbgomb[index].on("click", function() {
-    if (aktIndex < KEPEK.length -1 ) {
+for (let index = 0; index < jobbgomb.length; index++) {
+  jobbgomb.on("click", function() {
+    if (aktIndex < KEPEK.length - 1 ) {
       aktIndex++;
     } else {
       aktIndex = 0;
     }
-    console.log(aktIndex)
-    console.log(KEPEK[aktIndex].kep)
     nagykepIMG.attr = KEPEK[aktIndex].kep;
   });
 }
 
 const balgomb = $(".bal")
-        for (let index = 0; index < balgomb; index++) {
-            balgomb[index].on("click", function() {
-              if (aktIndex > 0 ) {
-                aktIndex--;
-              } else {
-                aktIndex = KEPEK.length -1;
-              }
-              console.log(aktIndex)
-              console.log(KEPEK[aktIndex].kep)
-              nagykepIMG.attr = KEPEK[aktIndex].kep;
-
-            });}
+for (let index = 0; index < balgomb.length; index++) {
+  balgomb.on("click", function() {
+    if (aktIndex > 0 ) {
+        aktIndex--;
+    } else {
+        aktIndex = KEPEK.length -1;
+    }
+    nagykepIMG.attr = KEPEK[aktIndex].kep;
+ });
+}
