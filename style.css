@@ -38,8 +38,7 @@ footer{
     text-align: center;
 }
 
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-}
 
+.belsokep{
+    display: inline-block;
+}

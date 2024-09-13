@@ -45,6 +45,6 @@ for (let index = 0; index < balgomb.length; index++) {
     } else {
         aktIndex = KEPEK.length -1;
     }
-    nagykepIMG.attr("src", KEPEK[aktIndex].kep);
+    new Kartya(aktIndex,nagyKEP)
  });
 }

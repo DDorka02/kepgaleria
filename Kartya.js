@@ -9,13 +9,13 @@ export default class Kartya {
         this.#index=index
         this.#taroloELEM=taroloELEM
         this.#taroloELEM.empty()
-        this.#source= KEPEK[index].kep
+        this.#source= KEPEK[index]
         this.kepKiir()
     }
 
     kepKiir(){
         
         this.#taroloELEM.append(`
-            <img src="kepek/DSC7681.jpeg" alt=""></img>`)
+            <img src="${this.#source.kep}" alt="${this.#source.cim}"></img>`)
           }
     }
