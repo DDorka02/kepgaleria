@@ -1,44 +1,33 @@
 import { KEPEK } from "./adatok.js";
-import Jatekter from "./Jatekter.js";
+import Jatekter from "./view/Jatekter.js";
 
-import NagyKartya from "./NagyKartya.js";
+import NagyKartya from "./view/NagyKartya.js";
 
 const TARTALOM = $(".galeria");
-const nagyKEP = $(".belsokep")
+const kivElem = $(".belsokep")
+let index=0
 
-new NagyKartya(2, nagyKEP);
+new NagyKartya(2, kivElem);
 
 new Jatekter(KEPEK,TARTALOM)
 
-$(window).on("galeria",(event)=>{
+
+  $(window).on("belsokep",(event)=>{
   console.log(event.detail)
-  nagyKEP.empty()
-  new NagyKartya(event.detail,nagyKEP)
+  kivElem.empty()
+  new NagyKartya(event.detail,kivElem)
 })
 
-let aktIndex = 0;
+$(window).on("jobb",(event)=>{  
+   index++;
+   if (index===LISTA.length) {index=0}
+   kivElem.empty()
+   new NagyKartya(LISTA[index],kivElem)
+})
+$(window).on("bal",(event)=>{  
+   index--;
+   if (index<0) {index=LISTA.length-1}
+   kivElem.empty()
+   new NagyKartya(LISTA[index],kivElem)
+})
 
-const jobbgomb = $(".jobb");
-for (let index = 0; index < jobbgomb.length; index++) {
-  jobbgomb.on("click", function() {
-    if (aktIndex < KEPEK.length - 1 ) {
-      aktIndex++;
-      if (index===LISTA.length){index=0}
-    } else {
-      aktIndex = 0;
-    }
-    new NagyKartya(aktIndex,nagyKEP)
-  });
-}
-
-const balgomb = $(".bal")
-for (let index = 0; index < balgomb.length; index++) {
-  balgomb.on("click", function() {
-    if (aktIndex > 0 ) {
-        aktIndex--;
-    } else {
-        aktIndex = KEPEK.length -1;
-    }
-    new NagyKartya(aktIndex,nagyKEP)
- });
-}
