@@ -24,10 +24,7 @@ main{
 .nagykep{
     background-color: rgb(253, 113, 57);
     text-align: center;
-}
-.nagykep img{
-    width: 50%;
-    max-width: 70%;
+    padding: 5px;
 }
 
 h1{

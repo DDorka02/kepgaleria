@@ -1,27 +1,20 @@
 import { KEPEK } from "./adatok.js";
 import Jatekter from "./Jatekter.js";
-import Kartya from "./Kartya.js";
+
+import NagyKartya from "./NagyKartya.js";
 
 const TARTALOM = $(".galeria");
 const nagyKEP = $(".belsokep")
 
-new Kartya(2, nagyKEP);
+new NagyKartya(2, nagyKEP);
 
-KEPEK.forEach((elem)=>{
-  console.log(elem)
-  new Jatekter(elem,TARTALOM)
+new Jatekter(KEPEK,TARTALOM)
+
+$(window).on("galeria",(event)=>{
+  console.log(event.detail)
+  nagyKEP.empty()
+  new NagyKartya(event.detail,nagyKEP)
 })
-
-const nagykepIMG = $(".nagykep img");
-const kisKEPELEMEK = $(".kep");
-
-for (let index = 0; index < kisKEPELEMEK.length; index++) {
-  kisKEPELEMEK[index].on("click", function (event) {
-    console.log(event.target.src);
-    aktIndex = index;
-    nagykepIMG.attr = event.target.src;
-  });
-}
 
 let aktIndex = 0;
 
@@ -30,10 +23,11 @@ for (let index = 0; index < jobbgomb.length; index++) {
   jobbgomb.on("click", function() {
     if (aktIndex < KEPEK.length - 1 ) {
       aktIndex++;
+      if (index===LISTA.length){index=0}
     } else {
       aktIndex = 0;
     }
-    new Kartya(aktIndex,nagyKEP)
+    new NagyKartya(aktIndex,nagyKEP)
   });
 }
 
@@ -45,6 +39,6 @@ for (let index = 0; index < balgomb.length; index++) {
     } else {
         aktIndex = KEPEK.length -1;
     }
-    new Kartya(aktIndex,nagyKEP)
+    new NagyKartya(aktIndex,nagyKEP)
  });
 }
