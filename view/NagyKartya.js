@@ -1,4 +1,4 @@
-import { KEPEK } from "../adatok.js";
+import { KEPEK } from "../model/adatok.js";
 
 export default class NagyKartya {
     #index
@@ -27,13 +27,9 @@ export default class NagyKartya {
                      <img src="${this.#source.kep}" alt="${this.#source.cim}"class="card-img-top">
                </div>
           </div>
-          <button class="jobb col-1">JOBB</button>
-            
-            `)
-          
-        
+          <button class="jobb col-1">JOBB</button>  
+            `)    
         }
-
 
     #esemenyTrigger(esemenynev){
         const e = new CustomEvent(esemenynev);
